@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+	
+		<action name="gstin_*" class="com.efive.gstmaster.master.GstinAction" method="{1}">
+		
+			<result name="gstinmaster">/WEB-INF/jsp/gstmaster.jsp</result>
+			<result name="master1">/WEB-INF/jsp/gstmasterdetaile.jsp</result>
+			<!-- <result name="update" type="redirect">gstin_getList</result> -->
+			<result name="addgstinclient" type="redirect">gstin_gstinMaster</result>
+			<result name="updateData" type="redirect">gstin_getList</result>
+			<result name="deletegstinclient" type="redirect">gstin_getList</result>
+			<result name="update">/WEB-INF/jsp/gstmaster.jsp</result>
+			<result name="updategstinclient" type="redirect">gstin_getList</result>
+			
+		</action>
+		
+	
+	</package>
+</struts>
