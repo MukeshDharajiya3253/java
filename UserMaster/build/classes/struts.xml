@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+	
+		<action name="login_*" class="com.login.LoginAction" method="{1}">
+			<result name="input">/WEB-INF/jsp/login.jsp</result>
+			<result name="loginaction" type="redirect">usermaster_data</result>
+		</action>
+		
+		<action name="usermaster_*" class="com.efive.UserMasterAction" method="{1}">
+			<result name="input">/WEB-INF/jsp/usermaster.jsp</result>
+			<result name="loginaction" type="redirect">usermaster_data</result>
+		</action>
+	
+	</package>
+</struts>
